@@ -1,5 +1,5 @@
 classdef Parameter < aws.Object
-% PARAMETER 
+% PARAMETER Object to represent a Parameter
 
 % Copyright 2019 The MathWorks, Inc.
 

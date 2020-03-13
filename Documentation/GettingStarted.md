@@ -2,7 +2,7 @@
 
 Once this package is installed and authentication is in place one can begin working with SSM™ and looking at simple workflows. The [Basic Usage](BasicUsage.md) and [API Reference](SSMApiDoc.md) documents provides greater details on the classes and methods being used along with information on error checking.
 
-### Write and Read a Client
+## Write and Read a Parameter
 ```matlab
 % Create client
 ssm = aws.simplesystemsmanagement.AWSSimpleSystemsManagementClient();

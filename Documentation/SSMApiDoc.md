@@ -39,10 +39,6 @@
  
      % Shutdown the client when no longer needed
      ssm.shutdown();
-
-    Reference page in Doc Center
-       doc aws.simplesystemsmanagement.AWSSimpleSystemsManagementClient
-
 ```
 ### @AWSSimpleSystemsManagementClient/createDocument.m
 ```notalanguage
@@ -105,10 +101,6 @@
 ### @CreateDocumentRequest/CreateDocumentRequest.m
 ```notalanguage
   CREATEDOCUEMTNREQUEST Object to represent a createDocument request
-
-    Reference page in Doc Center
-       doc aws.simplesystemsmanagement.model.CreateDocumentRequest
-
 ```
 ### @CreateDocumentRequest/setContent.m
 ```notalanguage
@@ -140,10 +132,6 @@
 ### @CreateDocumentResult/CreateDocumentResult.m
 ```notalanguage
   CREATEDOCUMENTRESULT Object to represent a createDocument result
-
-    Reference page in Doc Center
-       doc aws.simplesystemsmanagement.model.CreateDocumentResult
-
 ```
 
 ------
@@ -154,10 +142,6 @@
 ### @DeleteDocumentRequest/DeleteDocumentRequest.m
 ```notalanguage
   DELETEDOCUMENTREQUEST Object to represent a deleteDocument request
-
-    Reference page in Doc Center
-       doc aws.simplesystemsmanagement.model.DeleteDocumentRequest
-
 ```
 ### @DeleteDocumentRequest/setName.m
 ```notalanguage
@@ -173,10 +157,6 @@
 ### @DeleteDocumentResult/DeleteDocumentResult.m
 ```notalanguage
   DELETEDOCUMENTRESULT Object to represent a deleteDocument result
-
-    Reference page in Doc Center
-       doc aws.simplesystemsmanagement.model.DeleteDocumentResult
-
 ```
 
 ------
@@ -187,10 +167,6 @@
 ### @DeleteParameterRequest/DeleteParameterRequest.m
 ```notalanguage
   DELETEPARAMETERREQUEST Object to represent a deleteParameter request
-
-    Reference page in Doc Center
-       doc aws.simplesystemsmanagement.model.DeleteParameterRequest
-
 ```
 ### @DeleteParameterRequest/setName.m
 ```notalanguage
@@ -206,10 +182,6 @@
 ### @DeleteParameterResult/DeleteParameterResult.m
 ```notalanguage
   DELETEPARAMETERRESULT Object to represent a deleteParameter result
-
-    Reference page in Doc Center
-       doc aws.simplesystemsmanagement.model.DeleteParameterResult
-
 ```
 
 ------
@@ -220,10 +192,6 @@
 ### @GetParameterRequest/GetParameterRequest.m
 ```notalanguage
   GETPARAMETERREQUEST Object to represent a getParameter request
-
-    Reference page in Doc Center
-       doc aws.simplesystemsmanagement.model.GetParameterRequest
-
 ```
 ### @GetParameterRequest/setName.m
 ```notalanguage
@@ -244,10 +212,6 @@
 ### @GetParameterResult/GetParameterResult.m
 ```notalanguage
   GETPARAMETERRESULT Object to represent a getParameter result
-
-    Reference page in Doc Center
-       doc aws.simplesystemsmanagement.model.GetParameterResult
-
 ```
 ### @GetParameterResult/getParameter.m
 ```notalanguage
@@ -261,11 +225,7 @@
 
 ### @Parameter/Parameter.m
 ```notalanguage
-  PARAMETER
-
-    Reference page in Doc Center
-       doc aws.simplesystemsmanagement.model.Parameter
-
+  PARAMETER Object to represent a Parameter
 ```
 ### @Parameter/getARN.m
 ```notalanguage
@@ -313,10 +273,6 @@
   PARAMETERTYPE Enumeration of parameter types
   Possible values are: SecureString, String or StringList
   a toJava() method returns the equivalent Java enumeration.
-
-    Reference page in Doc Center
-       doc aws.simplesystemsmanagement.model.ParameterType
-
 ```
 
 ------
@@ -327,10 +283,6 @@
 ### @PutParameterRequest/PutParameterRequest.m
 ```notalanguage
   PUTPARAMETERREQUEST Object to represent a putParameter request
-
-    Reference page in Doc Center
-       doc aws.simplesystemsmanagement.model.PutParameterRequest
-
 ```
 ### @PutParameterRequest/setAllowedPattern.m
 ```notalanguage
@@ -348,6 +300,8 @@
   This is a required for parameters that use the SecureString data type.
   If a key ID is not specified, i.e. this function is not called the system uses
   the default key associated with the AWS account.
+  To use a custom KMS key, choose the SecureString data type with the Key ID
+  parameter.
 ```
 ### @PutParameterRequest/setName.m
 ```notalanguage
@@ -398,10 +352,6 @@
 ### @PutParameterResult/PutParameterResult.m
 ```notalanguage
   PUTPARAMETERRESULT Object to represent a putParameter result
-
-    Reference page in Doc Center
-       doc aws.simplesystemsmanagement.model.PutParameterResult
-
 ```
 
 ------
@@ -430,9 +380,29 @@
     s3.clientConfiguration.setProxyPort(8080);
     s3.initialize();
 
-    Reference page in Doc Center
+    Documentation for aws.ClientConfiguration
        doc aws.ClientConfiguration
 
+```
+### @ClientConfiguration/getNonProxyHosts.m
+```notalanguage
+  GETNONPROXYHOSTS Sets optional hosts accessed without going through the proxy
+  Returns either the nonProxyHosts set on this object, or if not provided,
+  returns the value of the Java system property http.nonProxyHosts.
+  Result is returned as a character vector.
+ 
+  Note the following caveat from the AWS DynamoDB documentation:
+ 
+  We still honor this property even when getProtocol() is https, see
+  http://docs.oracle.com/javase/7/docs/api/java/net/doc-files/net-properties.html
+  This property is expected to be set as a pipe separated list. If neither are
+  set, returns the value of the environment variable NO_PROXY/no_proxy.
+  This environment variable is expected to be set as a comma separated list.
+```
+### @ClientConfiguration/setNonProxyHosts.m
+```notalanguage
+  SETNONPROXYHOSTS Sets optional hosts accessed without going through the proxy
+  Hosts should be specified as a character vector.
 ```
 ### @ClientConfiguration/setProxyHost.m
 ```notalanguage
@@ -545,7 +515,7 @@
 ```notalanguage
   OBJECT Root object for all the AWS SDK objects
 
-    Reference page in Doc Center
+    Documentation for aws.Object
        doc aws.Object
 
 ```
