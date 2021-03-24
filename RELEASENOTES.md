@@ -1,6 +1,9 @@
 # MATLAB Interface *for AWS Systems Manager*
 # Release Notes
 
+## Release 0.0.4 (22nd Mar 2021)
+* Updated to support integration tests
+
 ## Release 0.0.3 (13th Oct 2020)
 * Bumped junit version
 
@@ -12,4 +15,4 @@
 * Initial release
 
 
-[//]: #  (Copyright 2019-2020 The MathWorks, Inc.)
+[//]: #  (Copyright 2019-2021 The MathWorks, Inc.)

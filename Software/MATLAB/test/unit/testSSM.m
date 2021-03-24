@@ -43,9 +43,10 @@ classdef testSSM < matlab.unittest.TestCase
             import java.util.UUID;
 
             ssm = aws.simplesystemsmanagement.AWSSimpleSystemsManagementClient;
-            % Use static credentials in the test environmnet
-            if strcmp(getenv('GITLABRUNNERENV'), 'TRUE')
+            if strcmpi(getenv('GITLAB_CI'), 'true')
                 ssm.useCredentialsProviderChain = false;
+            else
+                ssm.useCredentialsProviderChain = true;
             end
             ssm.initialize();
 
@@ -97,8 +98,10 @@ classdef testSSM < matlab.unittest.TestCase
             import java.util.UUID;
 
             ssm = aws.simplesystemsmanagement.AWSSimpleSystemsManagementClient;
-            if strcmp(getenv('GITLABRUNNERENV'), 'TRUE')
+            if strcmpi(getenv('GITLAB_CI'), 'true')
                 ssm.useCredentialsProviderChain = false;
+            else
+                ssm.useCredentialsProviderChain = true;
             end
             ssm.initialize();
 
@@ -149,8 +152,10 @@ classdef testSSM < matlab.unittest.TestCase
 
             ssm = aws.simplesystemsmanagement.AWSSimpleSystemsManagementClient;
             % Use static credentials in the test environmnet
-            if strcmp(getenv('GITLABRUNNERENV'), 'TRUE')
+            if strcmpi(getenv('GITLAB_CI'), 'true')
                 ssm.useCredentialsProviderChain = false;
+            else
+                ssm.useCredentialsProviderChain = true;
             end
             ssm.initialize();
 
@@ -197,8 +202,10 @@ classdef testSSM < matlab.unittest.TestCase
 
             ssm = aws.simplesystemsmanagement.AWSSimpleSystemsManagementClient;
             % Use static credentials in the test environmnet
-            if strcmp(getenv('GITLABRUNNERENV'), 'TRUE')
+            if strcmpi(getenv('GITLAB_CI'), 'true')
                 ssm.useCredentialsProviderChain = false;
+            else
+                ssm.useCredentialsProviderChain = true;
             end
             ssm.initialize();
 
@@ -261,9 +268,10 @@ classdef testSSM < matlab.unittest.TestCase
             import java.util.UUID;
 
             ssm = aws.simplesystemsmanagement.AWSSimpleSystemsManagementClient;
-            % Use static credentials in the test environmnet
-            if strcmp(getenv('GITLABRUNNERENV'), 'TRUE')
+            if strcmpi(getenv('GITLAB_CI'), 'true')
                 ssm.useCredentialsProviderChain = false;
+            else
+                ssm.useCredentialsProviderChain = true;
             end
             ssm.initialize();
 
@@ -334,8 +342,10 @@ classdef testSSM < matlab.unittest.TestCase
             import java.util.UUID;
 
             ssm = aws.simplesystemsmanagement.AWSSimpleSystemsManagementClient;
-            if strcmp(getenv('GITLABRUNNERENV'), 'TRUE')
+            if strcmpi(getenv('GITLAB_CI'), 'true')
                 ssm.useCredentialsProviderChain = false;
+            else
+                ssm.useCredentialsProviderChain = true;
             end
             ssm.initialize();
 
