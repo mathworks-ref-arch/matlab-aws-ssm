@@ -64,7 +64,7 @@
  
   Example:
      ssm = aws.simplesystemsmanagement.AWSSimpleSystemsManagementClient();
-     ssm.intialize();
+     ssm.initialize();
 ```
 ### @AWSSimpleSystemsManagementClient/putParameter.m
 ```notalanguage

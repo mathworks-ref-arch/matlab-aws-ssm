@@ -5,9 +5,9 @@ function initStat = initialize(obj, varargin)
 %
 % Example:
 %    ssm = aws.simplesystemsmanagement.AWSSimpleSystemsManagementClient();
-%    ssm.intialize();
+%    ssm.initialize();
 
-% Copyright 2019 The MathWorks, Inc.
+% Copyright 2019-2021 The MathWorks, Inc.
 
 %% Imports
 % Exceptions
